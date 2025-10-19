@@ -165,10 +165,10 @@ placeholder_text = "NODE NAME"
 
 [node name="Menu" type="HBoxContainer" parent="Control/CanvasLayer"]
 custom_minimum_size = Vector2(0, 50)
-offset_left = 13.0
-offset_top = 1008.0
-offset_right = 321.0
-offset_bottom = 1058.0
+offset_left = 40.0
+offset_top = 1031.0
+offset_right = 348.0
+offset_bottom = 1081.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-1, 44)
