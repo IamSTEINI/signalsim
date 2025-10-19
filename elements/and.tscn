@@ -1,0 +1,112 @@
+[gd_scene load_steps=11 format=3 uid="uid://cho778bfcc6gb"]
+
+[ext_resource type="Theme" uid="uid://blulrpncao26j" path="res://FONT.tres" id="1_y8lhi"]
+[ext_resource type="Script" uid="uid://badqu5exm26pu" path="res://scripts/node.gd" id="2_iq730"]
+[ext_resource type="Script" uid="uid://du01dyuw2ptw3" path="res://scripts/elements/and.gd" id="3_y8lhi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
+bg_color = Color(0, 0, 0, 0.6431373)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12156863, 0.09803922, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0du0"]
+bg_color = Color(0, 0, 0, 0.5372549)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12156863, 0.09803922, 0.13333334, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cm0pq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glv2v"]
+bg_color = Color(0.2585963, 0.21581927, 0.27856335, 1)
+border_width_bottom = 2
+border_color = Color(0.12189285, 0.09666347, 0.13450819, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu6xs"]
+bg_color = Color(0.3255819, 0.27421132, 0.3489514, 1)
+border_width_bottom = 2
+border_color = Color(0.12156863, 0.09803922, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2q8x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_112p8"]
+bg_color = Color(0.047557652, 0.047557652, 0.047557607, 1)
+
+[node name="NODE" type="GraphNode"]
+texture_filter = 1
+offset_right = 134.0
+offset_bottom = 56.0
+mouse_filter = 1
+theme = ExtResource("1_y8lhi")
+theme_override_styles/panel = SubResource("StyleBoxFlat_cm0pq")
+theme_override_styles/panel_selected = SubResource("StyleBoxFlat_r0du0")
+theme_override_styles/panel_focus = SubResource("StyleBoxEmpty_cm0pq")
+theme_override_styles/titlebar = SubResource("StyleBoxFlat_glv2v")
+theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_uu6xs")
+theme_override_styles/slot = SubResource("StyleBoxFlat_j2q8x")
+position_offset = Vector2(430, 91)
+resizable = true
+title = "TITLE"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 0, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = true
+slot/1/left_type = 0
+slot/1/left_color = Color(0.8862745, 0.8862745, 0, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 0, 0.49019608, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 1, 1, 1)
+slot/2/left_icon = null
+slot/2/right_enabled = true
+slot/2/right_type = 0
+slot/2/right_color = Color(1, 0, 0.49019608, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color(1, 1, 1, 1)
+slot/3/left_icon = null
+slot/3/right_enabled = false
+slot/3/right_type = 0
+slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_icon = null
+slot/3/draw_stylebox = true
+script = ExtResource("2_iq730")
+in_size = 2
+out_size = 1
+
+[node name="IN" type="Label" parent="."]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_112p8")
+text = "IN"
+horizontal_alignment = 2
+
+[node name="IN2" type="Label" parent="."]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_112p8")
+text = "IN"
+horizontal_alignment = 2
+
+[node name="OUT" type="Label" parent="."]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_112p8")
+text = "OUT"
+
+[node name="Handler" type="Control" parent="."]
+layout_mode = 2
+script = ExtResource("3_y8lhi")
