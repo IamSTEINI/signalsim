@@ -4,9 +4,6 @@ var mouse_offset := Vector2.ZERO
 var dragging := false
 var mouse_inside := false
 
-@export var INPUT = null
-@export var OUTPUT = null
-
 func _process(_delta: float) -> void:
 	if dragging:
 		position = get_global_mouse_position() + mouse_offset
