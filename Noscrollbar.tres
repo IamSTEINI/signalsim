@@ -1,0 +1,29 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dltglxo1dfqhl"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_glv2v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uu6xs"]
+
+[resource]
+HScrollBar/icons/decrement = SubResource("ImageTexture_glv2v")
+HScrollBar/icons/decrement_highlight = SubResource("ImageTexture_glv2v")
+HScrollBar/icons/decrement_pressed = SubResource("ImageTexture_glv2v")
+HScrollBar/icons/increment = SubResource("ImageTexture_glv2v")
+HScrollBar/icons/increment_highlight = SubResource("ImageTexture_glv2v")
+HScrollBar/icons/increment_pressed = SubResource("ImageTexture_glv2v")
+HScrollBar/styles/grabber = SubResource("StyleBoxEmpty_uu6xs")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_uu6xs")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_uu6xs")
+HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_uu6xs")
+HScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_uu6xs")
+VScrollBar/icons/decrement = SubResource("ImageTexture_glv2v")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_glv2v")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_glv2v")
+VScrollBar/icons/increment = SubResource("ImageTexture_glv2v")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_glv2v")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_glv2v")
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_uu6xs")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_uu6xs")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_uu6xs")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_uu6xs")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_uu6xs")

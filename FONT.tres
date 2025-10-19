@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://blulrpncao26j"]
+
+[ext_resource type="FontFile" uid="uid://p5jbou6yqyc0" path="res://BoldPixels.otf" id="1_ba4ol"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_glv2v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ba4ol"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hlgi4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j51on"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ecbs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0wf85"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nv5qd"]
+
+[resource]
+default_font = ExtResource("1_ba4ol")
+HScrollBar/icons/decrement = SubResource("ImageTexture_glv2v")
+HScrollBar/icons/decrement_highlight = SubResource("ImageTexture_glv2v")
+HScrollBar/icons/decrement_pressed = SubResource("ImageTexture_glv2v")
+HScrollBar/icons/increment = SubResource("ImageTexture_glv2v")
+HScrollBar/icons/increment_highlight = SubResource("ImageTexture_glv2v")
+HScrollBar/icons/increment_pressed = SubResource("ImageTexture_glv2v")
+HScrollBar/styles/grabber = SubResource("StyleBoxEmpty_ba4ol")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_hlgi4")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_j51on")
+HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_5ecbs")
+HScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_0wf85")
+VScrollBar/icons/decrement = SubResource("ImageTexture_glv2v")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_glv2v")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_glv2v")
+VScrollBar/icons/increment = SubResource("ImageTexture_glv2v")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_glv2v")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_glv2v")
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_nv5qd")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_nv5qd")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_nv5qd")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_nv5qd")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_nv5qd")

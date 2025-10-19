@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdg3fayooilvv"]
+
+[ext_resource type="Theme" uid="uid://b2wej3itaeke0" path="res://Button.tres" id="1_h2cc6"]
+
+[node name="add_Node" type="Button"]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 0)
+focus_mode = 0
+theme = ExtResource("1_h2cc6")
+text = "NODE"

@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://db0r383fab103"]
+
+[ext_resource type="Theme" uid="uid://blulrpncao26j" path="res://FONT.tres" id="1_sy5k4"]
+[ext_resource type="Script" uid="uid://badqu5exm26pu" path="res://scripts/node.gd" id="2_j2q8x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
+bg_color = Color(0, 0, 0, 0.6431373)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12156863, 0.09803922, 0.13333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0du0"]
+bg_color = Color(0, 0, 0, 0.5372549)
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.12156863, 0.09803922, 0.13333334, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cm0pq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glv2v"]
+bg_color = Color(0.2585963, 0.21581927, 0.27856335, 1)
+border_width_bottom = 2
+border_color = Color(0.12189285, 0.09666347, 0.13450819, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu6xs"]
+bg_color = Color(0.3255819, 0.27421132, 0.3489514, 1)
+border_width_bottom = 2
+border_color = Color(0.12156863, 0.09803922, 0.13333334, 1)
+
+[node name="NODE" type="GraphNode"]
+texture_filter = 1
+offset_right = 134.0
+offset_bottom = 84.0
+mouse_filter = 1
+theme = ExtResource("1_sy5k4")
+theme_override_styles/panel = SubResource("StyleBoxFlat_cm0pq")
+theme_override_styles/panel_selected = SubResource("StyleBoxFlat_r0du0")
+theme_override_styles/panel_focus = SubResource("StyleBoxEmpty_cm0pq")
+theme_override_styles/titlebar = SubResource("StyleBoxFlat_glv2v")
+theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_uu6xs")
+position_offset = Vector2(430, 91)
+resizable = true
+title = "TITLE"
+script = ExtResource("2_j2q8x")

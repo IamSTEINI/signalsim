@@ -1,8 +1,158 @@
-[gd_scene format=3 uid="uid://cngxj5i1mxxsh"]
+[gd_scene load_steps=12 format=3 uid="uid://cngxj5i1mxxsh"]
+
+[ext_resource type="Script" uid="uid://brkeokq81e5om" path="res://scripts/handler.gd" id="1_cm0pq"]
+[ext_resource type="Theme" uid="uid://dltglxo1dfqhl" path="res://Noscrollbar.tres" id="1_uu6xs"]
+[ext_resource type="PackedScene" uid="uid://cdg3fayooilvv" path="res://node_button.tscn" id="2_fos0i"]
+[ext_resource type="PackedScene" uid="uid://db0r383fab103" path="res://node.tscn" id="2_r0du0"]
+[ext_resource type="Theme" uid="uid://blulrpncao26j" path="res://FONT.tres" id="6_3dxm6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
+bg_color = Color(0.0885599, 0.08855992, 0.08855986, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.025363794, 0.025363805, 0.025363766, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fos0i"]
+bg_color = Color(0.11858138, 0.11858139, 0.11858136, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.023529412, 0.023529412, 0.023529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dxm6"]
+bg_color = Color(0.09019608, 0.09019608, 0.09019608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.023529412, 0.023529412, 0.023529412, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fos0i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3dxm6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgr22"]
 
 [node name="MAIN" type="Node2D"]
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cm0pq")
+add_button = ExtResource("2_fos0i")
+nodes = Dictionary[String, PackedScene]({
+"NODE": ExtResource("2_r0du0")
+})
+
+[node name="GraphEdit" type="GraphEdit" parent="Control"]
+layout_mode = 0
+offset_left = -961.0
+offset_top = -496.0
+offset_right = 959.0
+offset_bottom = 584.0
+theme = ExtResource("1_uu6xs")
+grid_pattern = 1
+right_disconnects = true
+minimap_enabled = false
+show_menu = false
+show_zoom_buttons = false
+show_grid_buttons = false
+show_minimap_button = false
+show_arrange_button = false
+
+[node name="NODE" parent="Control/GraphEdit" instance=ExtResource("2_r0du0")]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 137.0
+offset_right = 414.0
+offset_bottom = 221.0
+position_offset = Vector2(280, 137)
+title_text = "NODE"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CanvasLayer"]
+texture_filter = 1
+offset_left = 13.0
+offset_top = 14.0
+offset_right = 413.0
+offset_bottom = 44.0
+theme = ExtResource("6_3dxm6")
+theme_override_font_sizes/normal_font_size = 36
+text = "SIGNALSIM v0.1"
+scroll_active = false
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control/CanvasLayer"]
+texture_filter = 1
+offset_left = 13.0
+offset_top = 40.22
+offset_right = 413.0
+offset_bottom = 70.21996
+theme = ExtResource("6_3dxm6")
+theme_override_font_sizes/normal_font_size = 16
+text = "BY STEIN //////////////////////////"
+scroll_active = false
+vertical_alignment = 1
+
+[node name="NodeMenu" type="HBoxContainer" parent="Control/CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -217.0
+offset_top = 14.0
+offset_right = -17.0
+offset_bottom = 54.0
+grow_horizontal = 0
+alignment = 2
+
+[node name="DeleteSelected" type="Button" parent="Control/CanvasLayer/NodeMenu"]
+texture_filter = 1
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme = ExtResource("6_3dxm6")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_cm0pq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cm0pq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fos0i")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_cm0pq")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cm0pq")
+text = "DELETE (1)"
+
+[node name="INPUT" type="Panel" parent="Control/CanvasLayer/NodeMenu"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3dxm6")
+
+[node name="LineEdit" type="LineEdit" parent="Control/CanvasLayer/NodeMenu/INPUT"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 146.0
+offset_bottom = 36.0
+theme = ExtResource("6_3dxm6")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_fos0i")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_3dxm6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lgr22")
+placeholder_text = "NODE NAME"
+
+[node name="Menu" type="HBoxContainer" parent="Control/CanvasLayer"]
+custom_minimum_size = Vector2(0, 50)
+offset_left = 310.0
+offset_top = 14.0
+offset_right = 618.0
+offset_bottom = 64.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(7, 44)
+position = Vector2(-1, 44)
+
+[connection signal="node_deselected" from="Control/GraphEdit/NODE" to="Control" method="_on_node_node_deselected"]
+[connection signal="node_selected" from="Control/GraphEdit/NODE" to="Control" method="_on_node_node_selected"]
+[connection signal="pressed" from="Control/CanvasLayer/NodeMenu/DeleteSelected" to="Control" method="_on_delete_selected_pressed"]
+[connection signal="text_changed" from="Control/CanvasLayer/NodeMenu/INPUT/LineEdit" to="Control" method="_on_node_name_text_changed"]

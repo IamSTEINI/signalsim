@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5f317pufs73o"]
+
+[ext_resource type="Script" uid="uid://b35cowyt8plf7" path="res://scripts/drag.gd" id="1_n1wnl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhemu"]
+bg_color = Color(0.18239647, 0.16296208, 0.2086817, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_qhemu"]
+subpixel_positioning = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n1wnl"]
+bg_color = Color(0, 0, 0, 0.49803922)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.7294118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1wnl"]
+size = Vector2(130.66667, 60)
+
+[node name="Input" type="Node2D"]
+scale = Vector2(0.375, 0.375)
+script = ExtResource("1_n1wnl")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 115.735
+offset_bottom = 46.05
+mouse_filter = 1
+mouse_default_cursor_shape = 6
+
+[node name="BACKGROUND" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 116.0
+offset_bottom = 46.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qhemu")
+
+[node name="TextEdit" type="TextEdit" parent="Control"]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 80.0
+offset_bottom = 40.0
+theme_override_fonts/font = SubResource("SystemFont_qhemu")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_n1wnl")
+text = "123"
+context_menu_enabled = false
+emoji_menu_enabled = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(56.000004, 21.333334)
+shape = SubResource("RectangleShape2D_n1wnl")
