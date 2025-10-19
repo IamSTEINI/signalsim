@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://db0r383fab103"]
+[gd_scene load_steps=11 format=3 uid="uid://kf1watvytufs"]
 
-[ext_resource type="Theme" uid="uid://blulrpncao26j" path="res://FONT.tres" id="1_sy5k4"]
-[ext_resource type="Script" uid="uid://badqu5exm26pu" path="res://scripts/node.gd" id="2_j2q8x"]
+[ext_resource type="Theme" uid="uid://blulrpncao26j" path="res://FONT.tres" id="1_c04ud"]
+[ext_resource type="Script" uid="uid://badqu5exm26pu" path="res://scripts/node.gd" id="2_8b1vw"]
+[ext_resource type="Script" uid="uid://ddoa666r2cc3y" path="res://scripts/elements/display.gd" id="3_c04ud"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
 bg_color = Color(0, 0, 0, 0.6431373)
@@ -31,15 +32,15 @@ border_color = Color(0.12156863, 0.09803922, 0.13333334, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2q8x"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_112p8"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xtqo7"]
 bg_color = Color(0.047557652, 0.047557652, 0.047557607, 1)
 
 [node name="NODE" type="GraphNode"]
 texture_filter = 1
 offset_right = 134.0
-offset_bottom = 84.0
+offset_bottom = 63.0
 mouse_filter = 1
-theme = ExtResource("1_sy5k4")
+theme = ExtResource("1_c04ud")
 theme_override_styles/panel = SubResource("StyleBoxFlat_cm0pq")
 theme_override_styles/panel_selected = SubResource("StyleBoxFlat_r0du0")
 theme_override_styles/panel_focus = SubResource("StyleBoxEmpty_cm0pq")
@@ -47,35 +48,31 @@ theme_override_styles/titlebar = SubResource("StyleBoxFlat_glv2v")
 theme_override_styles/titlebar_selected = SubResource("StyleBoxFlat_uu6xs")
 theme_override_styles/slot = SubResource("StyleBoxFlat_j2q8x")
 position_offset = Vector2(430, 91)
-resizable = true
 title = "TITLE"
 slot/0/left_enabled = true
 slot/0/left_type = 0
-slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_color = Color(1, 1, 0, 1)
 slot/0/left_icon = null
 slot/0/right_enabled = false
 slot/0/right_type = 0
-slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_color = Color(1, 0, 0.49019608, 1)
 slot/0/right_icon = null
 slot/0/draw_stylebox = true
-slot/1/left_enabled = false
-slot/1/left_type = 0
-slot/1/left_color = Color(1, 1, 1, 1)
-slot/1/left_icon = null
-slot/1/right_enabled = true
-slot/1/right_type = 0
-slot/1/right_color = Color(1, 1, 1, 1)
-slot/1/right_icon = null
-slot/1/draw_stylebox = true
-script = ExtResource("2_j2q8x")
+script = ExtResource("2_8b1vw")
+in_size = 1
 
 [node name="IN" type="Label" parent="."]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_112p8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xtqo7")
 text = "IN"
 horizontal_alignment = 2
+script = ExtResource("3_c04ud")
 
-[node name="OUT" type="Label" parent="."]
-layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_112p8")
-text = "OUT"
+[node name="RichTextLabel" type="RichTextLabel" parent="IN"]
+layout_mode = 0
+offset_top = 18.0
+offset_right = 130.0
+offset_bottom = 43.0
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1

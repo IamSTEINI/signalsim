@@ -22,6 +22,7 @@ func _on_add_node_button_pressed(node_name: String, scene: PackedScene) -> void:
 	new_node.title_text = node_name
 	new_node.node_selected.connect(_on_node_node_selected)
 	new_node.node_deselected.connect(_on_node_node_deselected)
+	new_node.name = node_name
 	graph_edit.add_child(new_node)
 	
 func _on_node_node_selected() -> void:
