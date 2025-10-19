@@ -8,7 +8,6 @@ var selected_nodes = []
 
 func _ready() -> void:
 	node_menu.hide()
-	$CanvasLayer/NodeMenu/INPUT/LineEdit.text_changed.connect(_on_node_name_text_changed)
 	
 	for node_name in nodes.keys():
 		var new_node = add_button.instantiate()
