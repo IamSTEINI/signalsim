@@ -1,4 +1,5 @@
 extends Control
+
 func _process(delta: float) -> void:
 	var parent = get_parent()
 	if parent.has_method("set_output") && parent.has_method("get_input"):
