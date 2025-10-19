@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cngxj5i1mxxsh"]
+[gd_scene load_steps=21 format=3 uid="uid://cngxj5i1mxxsh"]
 
 [ext_resource type="Script" uid="uid://brkeokq81e5om" path="res://scripts/handler.gd" id="1_cm0pq"]
 [ext_resource type="Theme" uid="uid://dltglxo1dfqhl" path="res://Noscrollbar.tres" id="1_uu6xs"]
@@ -8,6 +8,12 @@
 [ext_resource type="Script" uid="uid://cev0lndfam5kp" path="res://scripts/nodemanager.gd" id="5_3dxm6"]
 [ext_resource type="PackedScene" uid="uid://kf1watvytufs" path="res://elements/display.tscn" id="5_trn2v"]
 [ext_resource type="Theme" uid="uid://blulrpncao26j" path="res://FONT.tres" id="6_3dxm6"]
+[ext_resource type="PackedScene" uid="uid://beseldehira4t" path="res://elements/binary_encoder.tscn" id="6_03owx"]
+[ext_resource type="PackedScene" uid="uid://ckxsak85q8kpn" path="res://elements/binary_decoder.tscn" id="7_wkp8b"]
+[ext_resource type="PackedScene" uid="uid://bbhsteiu048nv" path="res://elements/adder.tscn" id="8_20pc6"]
+[ext_resource type="PackedScene" uid="uid://dia6l0tiis02n" path="res://elements/subtractor.tscn" id="9_5vvyt"]
+[ext_resource type="PackedScene" uid="uid://dq7rlr1nla3cx" path="res://elements/light.tscn" id="10_c6i3y"]
+[ext_resource type="PackedScene" uid="uid://ca2jy6bvh6or4" path="res://elements/clock.tscn" id="11_c2ibq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
 bg_color = Color(0.0885599, 0.08855992, 0.08855986, 1)
@@ -49,9 +55,15 @@ offset_bottom = 40.0
 script = ExtResource("1_cm0pq")
 add_button = ExtResource("2_fos0i")
 nodes = Dictionary[String, PackedScene]({
+"ADDER": ExtResource("8_20pc6"),
+"BINARY DECODER": ExtResource("7_wkp8b"),
+"BINARY ENCODER": ExtResource("6_03owx"),
+"CLOCK": ExtResource("11_c2ibq"),
 "DISPLAY": ExtResource("5_trn2v"),
 "INPUT": ExtResource("4_lgr22"),
-"NODE": ExtResource("2_r0du0")
+"LIGHT": ExtResource("10_c6i3y"),
+"NODE": ExtResource("2_r0du0"),
+"SUBTRACTOR": ExtResource("9_5vvyt")
 })
 
 [node name="GraphEdit" type="GraphEdit" parent="Control"]
@@ -64,7 +76,7 @@ theme = ExtResource("1_uu6xs")
 grid_pattern = 1
 right_disconnects = true
 connection_lines_curvature = 1.0
-connection_lines_thickness = 10.0
+connection_lines_thickness = 5.0
 minimap_enabled = false
 show_menu = false
 show_zoom_buttons = false

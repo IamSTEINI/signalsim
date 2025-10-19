@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://db0r383fab103"]
+[gd_scene load_steps=11 format=3 uid="uid://beseldehira4t"]
 
-[ext_resource type="Theme" uid="uid://blulrpncao26j" path="res://FONT.tres" id="1_sy5k4"]
-[ext_resource type="Script" uid="uid://badqu5exm26pu" path="res://scripts/node.gd" id="2_j2q8x"]
-[ext_resource type="Script" uid="uid://pnus5xevf0hi" path="res://scripts/elements/handler.gd" id="3_luboh"]
+[ext_resource type="Theme" uid="uid://blulrpncao26j" path="res://FONT.tres" id="1_1hdvc"]
+[ext_resource type="Script" uid="uid://badqu5exm26pu" path="res://scripts/node.gd" id="2_0k6xa"]
+[ext_resource type="Script" uid="uid://bv4tcbe2mmkrs" path="res://scripts/elements/binaryconverter.gd" id="3_1hdvc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm0pq"]
 bg_color = Color(0, 0, 0, 0.6431373)
@@ -40,7 +40,7 @@ texture_filter = 1
 offset_right = 134.0
 offset_bottom = 56.0
 mouse_filter = 1
-theme = ExtResource("1_sy5k4")
+theme = ExtResource("1_1hdvc")
 theme_override_styles/panel = SubResource("StyleBoxFlat_cm0pq")
 theme_override_styles/panel_selected = SubResource("StyleBoxFlat_r0du0")
 theme_override_styles/panel_focus = SubResource("StyleBoxEmpty_cm0pq")
@@ -77,7 +77,7 @@ slot/2/right_type = 0
 slot/2/right_color = Color(1, 1, 1, 1)
 slot/2/right_icon = null
 slot/2/draw_stylebox = true
-script = ExtResource("2_j2q8x")
+script = ExtResource("2_0k6xa")
 in_size = 1
 out_size = 1
 
@@ -94,4 +94,4 @@ text = "OUT"
 
 [node name="Handler" type="Control" parent="."]
 layout_mode = 2
-script = ExtResource("3_luboh")
+script = ExtResource("3_1hdvc")

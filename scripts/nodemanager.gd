@@ -50,4 +50,3 @@ func _process(delta):
 			if to_node == null:
 				continue
 			to_node.set_input(to_port, output)
-			print("SEND:", from_node_name, "Port", from_port, ">>>", to_node_name, "Port", to_port, "Value:", output)
